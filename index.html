@@ -12,15 +12,17 @@
 
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="css/main.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
     <main>
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-sm-4 col-xs-4">
-                    <img class="img-responsive logo" src="images/me.png" alt="A logo of Udacity.">
+                    <img class="img-responsive logo" src="images/me.png" alt="Picture of Samuel Halim">
                 </div>
                 <div class="col-md-6 col-sm-8 col-xs-8 text-right text-uppercase">
                     <h1>Samuel Halim</h1>
@@ -28,13 +30,17 @@
                 </div>
             </div>
             <div class="row">
-                <div style="width: 100%; margin-top: 20px; margin-bottom: 20px; border-bottom: 2px solid #7d97ad; text-align: center;">
-                    <!-- <span style="font-size: 20px; background-color: white; padding: 0 10px;">
-                        <a id="about" href="#about" style="color: #2d3c49;">&#8595; About Me &#8595;</a>
-                    </span> -->
+                <div style="width: 100%; height: 20px; margin-bottom: 15px; border-bottom: 2px solid #7d97ad; text-align: center;">
+                    <span style="font-size: 20px; background-color: white; padding: 0 10px;">
+                        <a href="#about" data-toggle="collapse" style="color: #2d3c49; text-decoration:none">&#8595; About Me &#8595;</a>
+                    </span>
                 </div>
-                <div class="about">
-                    Hello!
+            </div>
+            <div class="row">
+                <div id="about" class="collapse about">
+                    <p>Hi! My name is Samuel Halim and I'm a recent graduate from UC Berkeley major in Electrical Engineering and Computer Science. I am currently taking Udacity Full Stack Developer Nanodegree to deepen my knowledge about full stack.</p>
+                    <p>I enjoy watching anime(One Piece), tv series, trying new food, reading book, dance, and snowboarding during my free time.
+                    <p>Thank you for visiting my website and I hope you can learn more about me here! The link to my LinkedIn, Github, and email is provided on the icon on the very bottom. You can check my resume <a href="src/Resume - Samuel Halim.pdf">here</a>.
                 </div>
             </div>
             <div class="row">
@@ -72,27 +78,10 @@
     </main>
     <footer>
         <ul>
-          <li><a href="src/Resume - Samuel Halim.pdf" style="text-decoration:none">Resume</a></li>
           <li><a href="https://www.linkedin.com/in/shalim95/" style="text-decoration:none" class="fa fa-linkedin-square fa-2x"></a></li>
           <li><a href="https://github.com/samuelhalim" style="text-decoration:none" class="fa fa-github fa-2x"></a></li>
           <li><a href="mailto:samuel.halim@berkeley.edu" style="text-decoration:none" class="fa fa-envelope fa-2x"></a></li>
         </ul>
       </footer>
-    <script>
-      /*
-       * Open the description when the dot-line is clicked.
-       */
-      var about = document.querySelector('#about');
-      var main = document.querySelector('main');
-      var drawer = document.querySelector('.about');
-
-      about.addEventListener('click', function(e) {
-        drawer.classList.toggle('open');
-        e.stopPropagation();
-      });
-      main.addEventListener('click', function() {
-        drawer.classList.remove('open');
-      });
-    </script>
 </body>
 </html>
